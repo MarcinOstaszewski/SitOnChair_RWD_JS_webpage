@@ -4,7 +4,7 @@ body {
     min-width: 500px;
 }
 /*-----------------------------------------*/
-/*              SEKCJA HEADER              */
+/*              HEADER SECTION             */
 /*-----------------------------------------*/
 h2.section-header {
     font-size: 1.5rem;
@@ -34,7 +34,6 @@ header {
     font-weight: 400;
 	.top-logo {
         font-size: 1.5rem;
-        // height: 2rem;
 		position: relative;
 		z-index: 100;
 	    float:left;
@@ -53,7 +52,6 @@ header {
 	    position: relative;
 	    text-align: right;
         font-size: 1rem;
-	    // transition: 0.5s background-color;
 		ul {
             float: right;
             list-style: none;
@@ -65,7 +63,6 @@ header {
     			width: 8rem;
                 text-align: left;
     			a {
-                    // font-size: 1.5rem;
     				color: #fff;
     			    text-decoration: none;
     			    transition: 0.3s color;
@@ -81,22 +78,22 @@ header {
     				left: -1rem;
     			    background: rgba(0,0,0,0.8);
     			    text-align: left;
-    			    width: 9rem;
+    			    width: 10rem;
                     display: none;
-    			    z-index: 100; /* żeby nie zostało zasłonięte przez slider */
-                    /* dodaje trójkącik nad submenu */
+    			    z-index: 100; /* to be in front of the SLIDER SECTION */
+                    /* add a triangle above submenu */
                     &:before {
-                        content: ''; //* content jest K O N I E C Z N E  dla :before
+                        content: ''; //* content is NECESSARY in ::before and ::after
                         width: 0;
                         height: 0;
-                        border: .5rem solid transparent; /* trzy krawędzie są niewidoczne */
-                        border-bottom: .5rem solid rgba(0,0,0,0.8); /* dolna krawędź ma kolor */
-                        position: absolute; /* żeby "uniezależnić" od reszty i odsunąć od pozycji wyjściowej  */
+                        border: .5rem solid transparent;
+                        border-bottom: .5rem solid rgba(0,0,0,0.8);
+                        position: absolute;
                         top: -1rem;
                         left: 1rem;
                     }
-                    &:after {  /* łączy menu i submenu, żeby submenu nie znikało przy przesuwaniu kursora w dół */
-                        content: ''; /* K O N I E C Z N E dla :after */
+                    &:after {  /* joining menu and submenu so it won't dissapeare while moving cursor down */
+                        content: '';
                         position: absolute;
                         left: 0;
                         height: .7rem;
@@ -122,7 +119,7 @@ header {
 }
 
 /*-----------------------------------------*/
-/*              SEKCJA SLIDER              */
+/*              SLIDER SECTION             */
 /*-----------------------------------------*/
 
 $sliderHeight: 320px; // height of the images inside
@@ -144,19 +141,14 @@ $sliderHeight: 320px; // height of the images inside
         transition: 0.5s opacity;
         font-size: 4rem;
         transition: 0.5s all;
-        // transition: 0.5s ;
         .left {
             float: left;
         }
         .right {
             float: right;
-
         }
         &:hover {
-            // transition: 0.5s opacity;
-            // transition: 0.5s text-shadow;
             transition: 0.5s all;
-
             opacity: 0.8;
             text-shadow: 2px 2px 1px #ccc;
         }
@@ -212,7 +204,7 @@ $sliderHeight: 320px; // height of the images inside
 }
 
 /* =================================== */
-/*         SEKCJA ARTICLES            */
+/*         ARTICLES SECTION           */
 /* ================================= */
 
 .articles {
@@ -223,7 +215,7 @@ $sliderHeight: 320px; // height of the images inside
 }
 
 .pict-container {
-    width: 329px; // width of images inside
+    width: 329px; // width of the images inside
     margin: 0.25rem;
     display: flex;
     position: relative;
@@ -231,7 +223,6 @@ $sliderHeight: 320px; // height of the images inside
     overflow: hidden;
 
     img {
-        // max-width: 100%;
         position: relative;
         transition: 0.5s all;
     }
@@ -242,11 +233,9 @@ $sliderHeight: 320px; // height of the images inside
         position: absolute;
         background-color: rgba(255, 255, 255, 0.5);
         bottom: 0.5rem;
-        // width: 100%;
         opacity: 1;
-        // transition: 0.5s opacity;
+        color: #000;
         &.invisible {
-            // transition: 0.5s opacity;
             opacity: 0;
         }
         h3 {
@@ -257,7 +246,7 @@ $sliderHeight: 320px; // height of the images inside
             margin-top: 0.5rem;
             margin-bottom: 0.5rem;
             &::after {
-                content: '';   // MUST HAVE !!!
+                content: '';
                 width: 14.5rem;
                 height: 0.2rem;
                 background-color: #38C3AD;
@@ -275,14 +264,14 @@ $sliderHeight: 320px; // height of the images inside
 }
 
 /* =================================== */
-/*          SEKCJA PRICES             */
+/*          PRICES SECTION            */
 /* ================================= */
 
 .prices {
     background-color: #eaeaea;
 
     .price-box-row {
-        margin: 0 -1rem 2rem -1rem; // -1rem to make width equal with earlier sections => .price-box has 1rem margin
+        margin: 0 -1rem 2rem -1rem; // LEFT -1rem to make width equal with earlier sections => .price-box has 1rem margin
     }
     .price-box {
         margin: 3rem 1rem;
@@ -305,7 +294,6 @@ $sliderHeight: 320px; // height of the images inside
             position: absolute;
             top: -3rem;
             transition: 0.25s all;
-
         }
         &:after {
             content: '';
@@ -316,7 +304,6 @@ $sliderHeight: 320px; // height of the images inside
             top: -2rem;
             border-radius: 50%;
             transition: 0.25s all;
-
         }
         &:hover {
             background-color: lighten(#38C3AD, 20);
@@ -379,7 +366,6 @@ $sliderHeight: 320px; // height of the images inside
 
         .price-list-container {
             width: 100%;
-
             .price-list {
                 text-align: center;
                 vertical-align: baseline;
@@ -404,11 +390,6 @@ $sliderHeight: 320px; // height of the images inside
             }
         }
         .price-btn-container {
-            // margin: 1.5rem;
-            // display: flex;
-            // margin-bottom: auto;
-            // align-self: flex-end;
-            // justify-content: flex-start;
             position: absolute;
             bottom: 1.5rem;
             a {
@@ -435,7 +416,7 @@ $sliderHeight: 320px; // height of the images inside
 }
 
 /* =================================== */
-/*          SEKCJA KONTAKT            */
+/*         CONTACT SECTION            */
 /* ================================= */
 
 .form-row {
@@ -457,7 +438,6 @@ $sliderHeight: 320px; // height of the images inside
         padding: 0.5rem;
         border: 1px solid #38C3AD;
         &:focus {
-            // border: 1px solid #38C3AD;
             outline: none;
             box-shadow: 1px 1px 1px #38C3AD;
         }
@@ -487,7 +467,6 @@ $sliderHeight: 320px; // height of the images inside
         justify-content: space-between;
         input {
             position: absolute;
-
             left: -1222px;
             &~.checkbox-icon {
                 margin: 0.5rem 0.5rem 0 0;
@@ -498,7 +477,6 @@ $sliderHeight: 320px; // height of the images inside
                 border: 1px solid #ccc;
                 &:before {
                     display: inline-block;
-
                     width: 2.5rem;
                     height: 2.5rem;
                     background: url(../images/form_ok.jpg) center center no-repeat;
@@ -519,12 +497,9 @@ $sliderHeight: 320px; // height of the images inside
             }
         }
         .checkbox-text {
-            // display: inline-block;
-            // width: auto;
             color: #38C3AD;
             font-size: 1rem;
             margin: 0.5rem 0 0.5rem 2rem;
-            // vertical-align: top;
             text-align: right;
             align-self: flex-end;
         }
@@ -543,8 +518,6 @@ $sliderHeight: 320px; // height of the images inside
 
         &:hover {
             background-color: lighten(#38C3AD,5);
-            // transition: 0.25s all;
-            // opacity: 0.8;
             text-shadow: -1px -1px 1px #666;
             box-shadow: 2px 2px 2px #666;
         }
