@@ -11,4 +11,6 @@ the styling is mostly CSS, made with SASS and Gulp,
 top menu items and image descriptions are animated with JavaScript.
 
 
+[online demo:](https://marcinostaszewski.github.io/SitOnChair_RWD_JS_webpage/)
+
 I will be adding new functionalities and improvements as I learn.
